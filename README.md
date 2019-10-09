@@ -5,9 +5,9 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version: Ruby 2.6.3
+* Rails version: 5.2.3
 
-* Configuration
+* Ruby version: 2.6.3 (x86_64-darwin18)
 
 * Services (job queues, cache servers, search engines, etc.)
 
