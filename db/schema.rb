@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_09_160317) do
+ActiveRecord::Schema.define(version: 2019_10_15_092140) do
 
   create_table "characters", force: :cascade do |t|
     t.string "name"
@@ -18,12 +18,12 @@ ActiveRecord::Schema.define(version: 2019_10_09_160317) do
     t.json "moves"
   end
 
-  create_table "move", force: :cascade do |t|
+  create_table "moves", force: :cascade do |t|
     t.string "name"
     t.string "movebtns"
     t.json "frame_data"
-    t.integer "characters_id"
-    t.index ["characters_id"], name: "index_move_on_characters_id"
+    t.integer "character_id"
+    t.index ["character_id"], name: "index_moves_on_character_id"
   end
 
 end
