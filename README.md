@@ -1,4 +1,4 @@
-# README
+# TEKKEN-API
 
 * Rails version: 5.2.3
 
