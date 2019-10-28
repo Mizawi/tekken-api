@@ -1,7 +1,9 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+CHARACTER_JSON_BASE_URL = 'https://raw.githubusercontent.com/dayhaysoos/t7-chicken-plus/master/assets/character-data/'
+CHARACTER_NAMES = ['akuma', 'alisa', 'anna', 'armorking', 'asuka', 'bob', 'bryan', 'claudio', 'deviljin', 'dragunov', 'eddy', 'eliza',
+                    'feng', 'geese', 'gigas', 'heihachi', 'hwoarang', 'jack', 'jin', 'josie', 'julia', 'katarina', 'kazumi', 'kazuya',
+                    'king', 'kuma', 'lars', 'law', 'lei', 'leo', 'lili', 'luckychloe', 'marduk', 'masterraven', 'miguel', 'negan', 'nina', 'noctis',
+                    'panda', 'paul', 'shaheen', 'steve', 'xiaoyu', 'yoshimitsu', 'zafina']
+
+CHARACTER_NAMES.each do |name|
+    Character.create!(JSON.load(open(CHARACTER_JSON_BASE_URL + name + '.json')))
+end
